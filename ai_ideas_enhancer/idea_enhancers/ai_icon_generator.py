@@ -17,6 +17,12 @@ class AIIconGenerator(AIEnhancer):
         Project Icon: 
         """
         
-        return {
-            "icon": self._generate(prompt, max_length=2, max_tries=10),
-        }
+        try:
+            return {
+                "icon": self._generate(prompt, max_length=2, max_tries=10),
+            }
+        
+        except Exception as e:
+            return {
+                "icon": input(f"Enter an icon for {idea}: "),
+            }
