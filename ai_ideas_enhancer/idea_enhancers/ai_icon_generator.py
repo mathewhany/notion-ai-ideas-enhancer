@@ -18,5 +18,5 @@ class AIIconGenerator(AIEnhancer):
         """
         
         return {
-            "icon": self._generate(prompt, max_length=3),
+            "icon": self._generate(prompt, max_length=2, max_tries=10),
         }
